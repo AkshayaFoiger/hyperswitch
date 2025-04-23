@@ -4187,6 +4187,19 @@ pub struct WaitScreenData {
     display_to_timestamp: Option<i128>,
 }
 
+/// Generates wait screen metadata for specific payment methods based on the redirection response.
+///
+/// For Blik payments, returns a wait screen with a display window of one minute.  
+/// For Mbway payments, returns a wait screen with no end timestamp.  
+/// For all other payment methods, returns `None`.
+///
+/// # Examples
+///
+/// ```
+/// let redirection_response = get_sample_redirection_response(PaymentType::Blik);
+/// let metadata = get_wait_screen_metadata(&redirection_response).unwrap();
+/// assert!(metadata.is_some());
+/// ```
 pub fn get_wait_screen_metadata(
     next_action: &RedirectionResponse,
 ) -> CustomResult<Option<serde_json::Value>, errors::ConnectorError> {
@@ -4269,6 +4282,17 @@ pub fn get_wait_screen_metadata(
     }
 }
 
+/// Extracts and encodes metadata for present-to-shopper payment flows based on the payment method type.
+///
+/// For supported voucher and bank transfer payment types, returns encoded metadata containing reference, expiration, and instruction URLs. For other payment types, returns `None`.
+///
+/// # Examples
+///
+/// ```
+/// let response = PresentToShopperResponse { /* fields populated for a voucher payment */ };
+/// let metadata = get_present_to_shopper_metadata(&response)?;
+/// assert!(metadata.is_some());
+/// ```
 pub fn get_present_to_shopper_metadata(
     response: &PresentToShopperResponse,
 ) -> CustomResult<Option<serde_json::Value>, errors::ConnectorError> {
