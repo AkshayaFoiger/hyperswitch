@@ -539,6 +539,7 @@ impl ConnectorData {
                     Ok(ConnectorEnum::Old(Box::new(connector::Paypal::new())))
                 }
                 enums::Connector::Paystack => {
+			enums::Connector::Paytm => Ok(ConnectorEnum::Old(Box::new(connector::Paytm))),
                     Ok(ConnectorEnum::Old(Box::new(connector::Paystack::new())))
                 }
                 // enums::Connector::Thunes => Ok(ConnectorEnum::Old(Box::new(connector::Thunes))),

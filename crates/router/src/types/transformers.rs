@@ -295,6 +295,7 @@ impl ForeignTryFrom<api_enums::Connector> for common_enums::RoutableConnectors {
             api_enums::Connector::Payone => Self::Payone,
             api_enums::Connector::Paypal => Self::Paypal,
             api_enums::Connector::Paystack => Self::Paystack,
+			api_enums::Connector::Paytm => Self::Paytm,
             api_enums::Connector::Payu => Self::Payu,
             api_models::enums::Connector::Placetopay => Self::Placetopay,
             api_enums::Connector::Plaid => Self::Plaid,
