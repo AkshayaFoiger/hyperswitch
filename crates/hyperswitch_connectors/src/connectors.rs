@@ -58,6 +58,7 @@ pub mod payeezy;
 pub mod payme;
 pub mod paypal;
 pub mod paystack;
+pub mod paytm;
 pub mod payu;
 pub mod placetopay;
 pub mod powertranz;
@@ -98,10 +99,10 @@ pub use self::{
     mifinity::Mifinity, mollie::Mollie, moneris::Moneris, multisafepay::Multisafepay,
     nexinets::Nexinets, nexixpay::Nexixpay, nomupay::Nomupay, noon::Noon, novalnet::Novalnet,
     nuvei::Nuvei, opayo::Opayo, opennode::Opennode, paybox::Paybox, payeezy::Payeezy, payme::Payme,
-    paypal::Paypal, paystack::Paystack, payu::Payu, placetopay::Placetopay, powertranz::Powertranz,
-    prophetpay::Prophetpay, rapyd::Rapyd, razorpay::Razorpay, recurly::Recurly, redsys::Redsys,
-    shift4::Shift4, square::Square, stax::Stax, stripebilling::Stripebilling, taxjar::Taxjar,
-    thunes::Thunes, trustpay::Trustpay, tsys::Tsys,
+    paypal::Paypal, paystack::Paystack, paytm::Paytm, payu::Payu, placetopay::Placetopay,
+    powertranz::Powertranz, prophetpay::Prophetpay, rapyd::Rapyd, razorpay::Razorpay,
+    recurly::Recurly, redsys::Redsys, shift4::Shift4, square::Square, stax::Stax,
+    stripebilling::Stripebilling, taxjar::Taxjar, thunes::Thunes, trustpay::Trustpay, tsys::Tsys,
     unified_authentication_service::UnifiedAuthenticationService, volt::Volt,
     wellsfargo::Wellsfargo, worldline::Worldline, worldpay::Worldpay, xendit::Xendit, zen::Zen,
     zsl::Zsl,
