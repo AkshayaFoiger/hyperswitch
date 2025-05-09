@@ -256,6 +256,7 @@ impl ForeignTryFrom<api_enums::Connector> for common_enums::RoutableConnectors {
             api_enums::Connector::Globalpay => Self::Globalpay,
             api_enums::Connector::Globepay => Self::Globepay,
             api_enums::Connector::Gocardless => Self::Gocardless,
+			api_enums::Connector::Googlepay => Self::Googlepay,
             api_enums::Connector::Gpayments => {
                 Err(common_utils::errors::ValidationError::InvalidValue {
                     message: "gpayments is not a routable connector".to_string(),

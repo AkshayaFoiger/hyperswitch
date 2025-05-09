@@ -92,6 +92,7 @@ mod taxjar;
 mod trustpay;
 mod tsys;
 mod unified_authentication_service;
+mod googlepay;
 mod utils;
 mod volt;
 mod wellsfargo;

@@ -16,6 +16,7 @@ pub mod wellsfargopayout;
 pub mod wise;
 
 pub use hyperswitch_connectors::connectors::{
+    googlepay, googlepay::Googlepay,
     aci, aci::Aci, adyen, adyen::Adyen, airwallex, airwallex::Airwallex, amazonpay,
     amazonpay::Amazonpay, authorizedotnet, authorizedotnet::Authorizedotnet, bambora,
     bambora::Bambora, bamboraapac, bamboraapac::Bamboraapac, bankofamerica,
