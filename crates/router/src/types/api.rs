@@ -419,6 +419,7 @@ impl ConnectorData {
                     Ok(ConnectorEnum::Old(Box::new(connector::Globepay::new())))
                 }
                 enums::Connector::Gocardless => {
+			enums::Connector::Googlepay => Ok(ConnectorEnum::Old(Box::new(connector::Googlepay))),
                     Ok(ConnectorEnum::Old(Box::new(&connector::Gocardless)))
                 }
                 enums::Connector::Hipay => {
